@@ -1,0 +1,17 @@
+_somatorio:
+	movl	ebp,esp
+	mvil	temp,0
+	mvil	temp2,0
+	jmp     L2
+L3:
+	movl	eax,temp2
+	addl	temp,eax
+	incl	temp2
+	jmp     L2
+L2:
+	movl	eax,temp2
+	cmpl	eax,ebp
+	jle     L3
+	movl	eax,temp
+	leave
+	ret
